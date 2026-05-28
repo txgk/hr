@@ -31,7 +31,7 @@ hr() {
         return
     fi
 
-    printf '%*s' "$COLS" ' ' | sed "s/ /$1/g" | grep -o "^.\{$COLS\}"
+    printf '%*s' "$COLS" ' ' | sed "s/ /$1/g" | cut -c1-"$COLS"
 }
 
 hrs() {
